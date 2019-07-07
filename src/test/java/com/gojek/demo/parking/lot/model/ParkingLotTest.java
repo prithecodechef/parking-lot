@@ -8,9 +8,6 @@ import java.util.PriorityQueue;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by priyanka.shukla on 08/07/19.
- */
 public class ParkingLotTest {
 
     private ParkingLot parkingLot;
