@@ -1,7 +1,9 @@
-# Add script to:
-# * Install dependencies
-# * Build/Compile
-# * Run Test Suit to validate
-#
-# After this is run, bin/parking_lot
-# should Just Work.
+#!/bin/bash -ex
+
+LOCAL_DIR=`pwd`
+
+cd ${LOCAL_DIR};
+DEB_DIR="$LOCAL_DIR/bin"
+
+mvn clean install -U -X
+[ $? -ne 0 ] && die "Build failure"

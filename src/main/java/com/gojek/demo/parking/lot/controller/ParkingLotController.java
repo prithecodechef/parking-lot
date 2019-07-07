@@ -79,8 +79,8 @@ public class ParkingLotController {
         List<Vehicle> vehicles = parkingLot.getColorToVehicleMap().get(color);
         List<String> slots = new ArrayList<>();
         vehicles.forEach(v -> slots.add(Integer.toString(v.getParkingSpot().getSlotNumber())));
-        print(String.join(",", slots));
-        return String.join(",", slots);
+        print(String.join(", ", slots));
+        return String.join(", ", slots);
     }
 
     public String registrationNumbersForCarsWithColour(String color){
@@ -91,8 +91,8 @@ public class ParkingLotController {
         List<Vehicle> vehicles = parkingLot.getColorToVehicleMap().get(color);
         List<String> registrationNos = new ArrayList<>();
         vehicles.forEach(v -> registrationNos.add(v.getRegistrationNumber()));
-        print(String.join(",", registrationNos));
-        return String.join(",", registrationNos);
+        print(String.join(", ", registrationNos));
+        return String.join(", ", registrationNos);
     }
 
     private void print(String message){

@@ -12,9 +12,9 @@ public class Constants {
 
     public static final String PARKING_LOT_CREATED = "Created a parking lot with %s slots";
 
-    public static final String STATUS_HEADER = "Slot No.\tRegistration No\t\tColour";
+    public static final String STATUS_HEADER = "Slot No.    Registration No    Colour";
 
-    public static final String STATUS_BODY = "%s\t\t\t%s\t\t%s\n";
+    public static final String STATUS_BODY = "%s           %s      %s\n";
 
     public static final String ALL_PARKING_SLOT_EMPTY = "All parking slots are free";
 
