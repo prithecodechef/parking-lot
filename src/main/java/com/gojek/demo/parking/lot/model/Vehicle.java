@@ -1,15 +1,11 @@
 package com.gojek.demo.parking.lot.model;
 
-import com.sun.istack.internal.NotNull;
-
 public class Vehicle {
-    @NotNull
+
     private String registrationNumber;
 
-    @NotNull
     private String color; //can be a enum
 
-    @NotNull
     private ParkingSpot parkingSpot;
 
     public Vehicle(String regitrationNumber, String color) {

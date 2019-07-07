@@ -27,3 +27,5 @@ modules.xml
 parking_lot.iml
 vcs.xml
 uiDesigner.xml
+*.lst
+pom.properties

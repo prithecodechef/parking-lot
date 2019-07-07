@@ -76,16 +76,19 @@ public class ParkingLot {
      * @return
      */
     public ParkingSpot parkVehicle(Vehicle vehicle){
-        ParkingSpot parkingSpot = getNextEmptySlot();
-        vehicle.setParkingSpot(parkingSpot);
-        parkingSpot.setVehicle(vehicle);
-        parkedVehicles.put(vehicle.getRegistrationNumber(), vehicle);
-        occupiedParkingSlots.put(parkingSpot.getSlotNumber(), parkingSpot);
-        if(!colorToVehicleMap.containsKey(vehicle.getColor()) || colorToVehicleMap.get(vehicle.getColor()) == null){
-            createNewColor(vehicle);
+        if(isParkingSpaceAvailable()) {
+            ParkingSpot parkingSpot = getNextEmptySlot();
+            vehicle.setParkingSpot(parkingSpot);
+            parkingSpot.setVehicle(vehicle);
+            parkedVehicles.put(vehicle.getRegistrationNumber(), vehicle);
+            occupiedParkingSlots.put(parkingSpot.getSlotNumber(), parkingSpot);
+            if (!colorToVehicleMap.containsKey(vehicle.getColor()) || colorToVehicleMap.get(vehicle.getColor()) == null) {
+                createNewColor(vehicle);
+            }
+            colorToVehicleMap.get(vehicle.getColor()).add(vehicle);
+            return parkingSpot;
         }
-        colorToVehicleMap.get(vehicle.getColor()).add(vehicle);
-        return parkingSpot;
+        return null;
     }
 
     /**
