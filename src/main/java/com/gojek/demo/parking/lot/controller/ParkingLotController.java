@@ -53,7 +53,7 @@ public class ParkingLotController {
             return;
         }
         print(Constants.STATUS_HEADER);
-        for(int i = 0; i < parkingLot.CAPACITY; i++){
+        for(int i = 0; i <= parkingLot.CAPACITY; i++){
             if(parkingLot.getOccupiedParkingSlots().containsKey(i)){
                 ParkingSpot parkingSpot = parkingLot.getOccupiedParkingSlots().get(i);
                 System.out.format(String.format(Constants.STATUS_BODY, i, parkingSpot.getVehicle().getRegistrationNumber(), parkingSpot.getVehicle().getColor()));
