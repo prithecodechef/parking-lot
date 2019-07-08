@@ -1,9 +1,11 @@
 #!/bin/bash -ex
 
-LOCAL_DIR=`pwd`
 
-cd ${LOCAL_DIR};
-DEB_DIR="$LOCAL_DIR/bin"
+JAVA=/usr/lib/jvm/j2sdk1.8-oracle
+JAVA_PACKAGE=oracle-j2sdk1.8
+JAVA_VERSION=1.8
+export JAVA_HOME=${JAVA}
 
-mvn clean install -U -X
+mvn clean install -U -X -U -X -Djava.version=${JAVA_VERSION}
+
 [ $? -ne 0 ] && die "Build failure"
