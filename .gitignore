@@ -22,10 +22,10 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-misc.xml
-modules.xml
-parking_lot.iml
-vcs.xml
-uiDesigner.xml
-*.lst
-pom.properties
+*.iml
+
+target/
+.idea/
+*.iml
+logs/
+.rspec_status
